@@ -1,8 +1,8 @@
 # Laravel Simple Contact Form Package
 
-#### Installation Instruction
+## Installation Instruction
 
-- `composer require tridibdawn/simple-contact-form`
+- `composer require itobuztech/contact`
 - `php artisan vendor:publish`
 - Change the __"send_email_to"__ value inside the __'config/contact.php'__ file
 - "php artisan migrate"
