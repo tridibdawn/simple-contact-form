@@ -10,3 +10,8 @@
 - Change the __"send_email_to"__ value inside the __'config/contact.php'__ file
 - "php artisan migrate"
 - visit __"/contact"__ route in your browser to see the contact us page
+
+### Minimum Dependencies
+
+- Minimum Laravel Version: 7.x
+- Minimum PHP Version: 7.2.x

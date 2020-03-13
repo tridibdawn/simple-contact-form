@@ -17,8 +17,12 @@ class ContactController extends Controller
 
     public function send(Request $request)
     {
-        Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->usermessage, $request->useremail, $request->username));
-        Contact::create($request->all());
-        return redirect(route('contact.index'));
+        try {
+            Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->usermessage, $request->useremail, $request->username));
+            Contact::create($request->all());
+            return redirect(route('contact.index'));
+        } catch (\Exception $e) {
+            return view('contact::error')->with('message', 'Oops! something went wrong. Please check your app configuration.');
+        }
     }
 }
