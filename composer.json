@@ -1,0 +1,26 @@
+{
+    "name": "itobuztech/contact",
+    "description": "A simple contact form to store message from visitor of the site",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "itobuztech",
+            "email": "info@itobuz.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Itobuztech\\Contact\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Itobuztech\\Contact\\ContactServiceProvider"
+            ]
+        }
+    }
+}
